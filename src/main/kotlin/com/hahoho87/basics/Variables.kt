@@ -1,5 +1,8 @@
 package com.hahoho87
 
+import functions.courseName
+import functions.topLevelFunction
+
 fun main() {
     val name: String = "hahoho"
     println(name)
@@ -7,4 +10,8 @@ fun main() {
 
     var age: Int = 20
     age = 32
+
+    val num = topLevelFunction()
+    println(num)
+    println("courseName is $courseName")
 }
