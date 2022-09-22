@@ -1,4 +1,4 @@
-package com.hahoho87
+package com.hahoho87.basics
 
 import functions.courseName
 import functions.topLevelFunction
