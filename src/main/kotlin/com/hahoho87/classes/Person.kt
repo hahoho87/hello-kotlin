@@ -4,8 +4,18 @@ class Person(
     val name: String = "",
     val age: Int = 0
 ) {
+    var email: String = ""
+
+    constructor(
+        _email: String,
+        _name: String,
+        _age: Int
+    ) : this(_name, _age) {
+        email = _email
+    }
+
     fun action() {
-       println("Person walks")
+        println("Person walks")
     }
 }
 
@@ -17,4 +27,8 @@ fun main() {
     val person1 = Person("Hahoho87", 30)
     person1.action()
     println("Name: ${person1.name}, Age: ${person1.age}")
+
+    val person2 = Person(_email = "abc@email.com", "Hahoho87", 30)
+    person2.action()
+    println("Name: ${person2.name}, Age: ${person2.age} and the email is ${person2.email}")
 }
