@@ -5,6 +5,12 @@ class Person(
     val age: Int = 0
 ) {
     var email: String = ""
+    var nameLength: Int = 0
+
+    init {
+        println("inside init block")
+        nameLength = name.length
+    }
 
     constructor(
         _email: String,
@@ -30,5 +36,5 @@ fun main() {
 
     val person2 = Person(_email = "abc@email.com", "Hahoho87", 30)
     person2.action()
-    println("Name: ${person2.name}, Age: ${person2.age} and the email is ${person2.email}")
+    println("Name: ${person2.name}, Age: ${person2.age} and the email is ${person2.email} and name length is ${person2.nameLength}")
 }
