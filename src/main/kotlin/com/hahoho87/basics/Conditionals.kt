@@ -5,10 +5,8 @@ fun main() {
     var name = "hahoho"
     if (name.length == 6) {
         println("length of name is 6")
-        name
     } else {
         println("length of name is not 6")
-        name
     }
     println("length of name $name is ${name.length}")
 
