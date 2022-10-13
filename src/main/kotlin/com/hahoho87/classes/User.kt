@@ -1,12 +1,19 @@
 package com.hahoho87.classes
 
 open class User(val name: String){
-    fun login() {
-        print("Inside usr login")
+    open var isLoggedIn: Boolean = false
+    open fun login() {
+        println("Inside user login")
     }
 }
 
-class Student(name: String): User(name)
+class Student(name: String) : User(name) {
+    override var isLoggedIn: Boolean = false
+    override fun login() {
+        super.login()
+        println("Inside student login")
+    }
+}
 
 class Instructor(name: String): User(name)
 
