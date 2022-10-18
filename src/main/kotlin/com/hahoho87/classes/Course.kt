@@ -6,6 +6,13 @@ data class Course(
     val author: String
 )
 
+enum class CourseCategory {
+    DEVELOPMENT,
+    BUSINESS,
+    DESIGN,
+    MARKETING
+}
+
 fun main() {
     val course = Course(1, "Kotlin", "Hahoho87")
     println("course id is ${course.id}, course name is ${course.name}, course author is ${course.author}")
