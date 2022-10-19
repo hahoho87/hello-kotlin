@@ -4,7 +4,8 @@ import com.hahoho87.classes.Course
 
 fun castNumber(any: Any) {
     when (any) {
-        any as Double -> println("Value is Double")
+        any as? Double -> println("Value is Double")
+        any as? Int -> println("Value is Int")
     }
 }
 
@@ -15,7 +16,7 @@ fun main() {
     checkType(test)
 
     castNumber(1.0)
-//    castNumber(1) // ClassCastException
+    castNumber(1) // ClassCastException
 
     val number = 1
     val numberDouble = number.toDouble()
