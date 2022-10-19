@@ -5,8 +5,17 @@ data class Movie(
     val title: String
 )
 
+fun printName(name: String) {
+    println("Name is $name")
+}
+
 fun main() {
     var nameNullable: String? = null
+
+    nameNullable?.run {
+        printName(this)
+    }
+
     // java style
     /* if (nameNullable != null) {
         println("value is ${nameNullable.length}")
